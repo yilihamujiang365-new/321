@@ -1,21 +1,18 @@
 {
     "en": [
         {
-            "title": "News 1",
-            "content": "Dai Pengjun sleeps 💤",
+            "title": "Website building！",
+            "content": "The official website of 321 Dormitory was established and deployed on Github pages",
             "date": "2023-06-06 23:59"
         }
     ],
     "zh": [
         {
-            "title": "新闻 1",
-            "content": "戴鹏军同学睡觉💤 ",
+            "title": "网站建立！",
+            "content": "321宿舍官网建立，部署在了Github pages",
             "date": "2023-06-06 23:59"
-        } ,
-        {
-            "title": "新闻 1",
-            "content": "戴鹏军同学睡觉💤 ",
-            "date": "2023-06-06 23:59"
-        }      
+        } 
+        
+            
     ]
 }
