@@ -22,7 +22,7 @@ function loadTranslations(language) {
             document.getElementById('news-heading').textContent = data[language].newsHeading;
             document.getElementById('contact-heading').textContent = data[language].contactHeading;
             document.getElementById('links-heading').textContent = data[language].linksHeading;
-            document.querySelector('#contact p').innerHTML = `${data[language].developerEmail} <a href="mailto:developer@example.com">developer@example.com</a>`;
+            document.querySelector('#contact p').innerHTML = `${data[language].developerEmail} <a href="mailto:yilihamujiang365@outlook.com">Yilihamujiang365@outlook.com</a>`;
         })
         .catch(error => {
             console.error('Error fetching translations:', error);
