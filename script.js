@@ -10,6 +10,25 @@ document.addEventListener("DOMContentLoaded", function() {
     });
 });
 
+function loadTranslations(language) {
+    fetch('translations.json')
+        .then(response => response.json())
+        .then(data => {
+            document.title = data[language].title;
+            document.getElementById('main-title').textContent = data[language].mainTitle;
+            document.getElementById('languageLabel').textContent = data[language].languageLabel;
+            document.getElementById('heading1').textContent = data[language].heading1;
+            document.getElementById('student-info-heading').textContent = data[language].studentInfoHeading;
+            document.getElementById('news-heading').textContent = data[language].newsHeading;
+            document.getElementById('contact-heading').textContent = data[language].contactHeading;
+            document.getElementById('links-heading').textContent = data[language].linksHeading;
+            document.querySelector('#contact p').innerHTML = `${data[language].developerEmail} <a href="mailto:developer@example.com">developer@example.com</a>`;
+        })
+        .catch(error => {
+            console.error('Error fetching translations:', error);
+        });
+}
+
 function loadContent(language) {
     // 清空现有内容
     document.getElementById('student-info').innerHTML = '';
@@ -49,8 +68,9 @@ function loadContent(language) {
             data[language].forEach(news => {
                 const newsItem = document.createElement('div');
                 newsItem.className = 'news-card';
-                newsItem.innerHTML = `
+                newsItem.innerHTML = `                    
                     <h3>${news.title}</h3>
+                    <p class="news-date">${news.date}</p>
                     <p>${news.content}</p>
                 `;
                 newsDiv.appendChild(newsItem);
@@ -58,23 +78,6 @@ function loadContent(language) {
         })
         .catch(error => {
             console.error('Error fetching news:', error);
-        });
-}
-function loadTranslations(language) {
-    fetch('translations.json')
-        .then(response => response.json())
-        .then(data => {
-            document.title = data[language].title;
-            document.getElementById('languageLabel').textContent = data[language].languageLabel;
-            document.getElementById('heading1').textContent = data[language].heading1;
-            document.getElementById('student-info-heading').textContent = data[language].studentInfoHeading;
-            document.getElementById('news-heading').textContent = data[language].newsHeading;
-            document.getElementById('contact-heading').textContent = data[language].contactHeading;
-            document.getElementById('links-heading').textContent = data[language].linksHeading;
-            document.querySelector('#contact p').innerHTML = `${data[language].developerEmail} <a href="mailto:yilihamujiang356@outlook.com">Yilihamujiang365@outlook.com</a>`;
-        })
-        .catch(error => {
-            console.error('Error fetching translations:', error);
         });
 }
 

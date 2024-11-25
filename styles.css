@@ -1,17 +1,76 @@
+/* 样式的全局配置 */
+:root {
+    --background-light: #f4f4f4;
+    --background-dark: #2c3e50;
+    --text-light: #333;
+    --text-dark: #f4f4f4;
+    --card-background-light: #ffffff;
+    --card-background-dark: #34495e;
+    --card-shadow-light: rgba(0, 0, 0, 0.1);
+    --card-shadow-dark: rgba(0, 0, 0, 0.5);
+    --primary-color: #2980b9;
+    --header-background-light: #ffffff;
+    --header-background-dark: #2c3e50;
+}
+
+@media (prefers-color-scheme: dark) {
+    :root {
+        --background-light: var(--background-dark);
+        --text-light: var(--text-dark);
+        --card-background-light: var(--card-background-dark);
+        --card-shadow-light: var(--card-shadow-dark);
+        --header-background-light: var(--header-background-dark);
+    }
+}
+
 body {
-    font-family: Arial, sans-serif;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     line-height: 1.6;
     padding: 20px;
-    background-color: #f4f4f4;
-    color: #333;
+    background-color: var(--background-light);
+    color: var(--text-light);
+    margin: 0 auto;
+    max-width: 1200px;
+}
+
+.container {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 20px;
+}
+
+header {
+    width: 100%;
+    background-color: var(--header-background-light);
+    padding: 10px 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px var(--card-shadow-light);
+    margin-bottom: 20px;
+}
+
+#main-title {
+    font-size: 2.5em;
+    font-weight: bold;
+    color: var(--primary-color);
+    font-family: 'Brush Script MT', cursive;
+    text-align: center;
 }
 
 h1, h2, h3 {
-    color: #333;
+    color: var(--text-light);
+    margin-bottom: 10px;
 }
 
 .language-selector {
     margin-bottom: 20px;
+}
+
+section {
+    width: 100%;
 }
 
 #student-info, #news, #links {
@@ -21,36 +80,55 @@ h1, h2, h3 {
 }
 
 .student-card, .news-card {
-    background-color: #fff;
-    border-radius: 8px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    background-color: var(--card-background-light);
+    border-radius: 10px;
+    box-shadow: 0 4px 8px var(--card-shadow-light);
     padding: 20px;
-    width: calc(50% - 20px);
+    width: calc(33.333% - 20px);
     box-sizing: border-box;
     transition: transform 0.3s, box-shadow 0.3s;
 }
 
 .student-card:hover, .news-card:hover {
     transform: translateY(-10px);
-    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+    box-shadow: 0 12px 24px var(--card-shadow-light);
+}
+
+@media (max-width: 1900px) {
+    .student-card{
+        width: calc(50% - 20px);
+    }
+     .news-card {
+        width: calc(100% - 20px);
+    }
 }
 
 @media (max-width: 768px) {
     .student-card, .news-card {
-        width: calc(100% - 20px);
+        /*width: calc(100% - 20px);*/
+        width: 100%;
     }
 }
 
 .student-card h3, .news-card h3 {
     margin-top: 0;
+    color: var(--text-light);
 }
 
 .student-card p, .news-card p {
     margin: 5px 0;
+    color: var(--text-light);
+}
+
+.news-date {
+    color: #999;
+    font-size: 0.9em;
+    margin-bottom: 10px;
+    
 }
 
 strong {
-    color: #555;
+    color: var(--primary-color);
 }
 
 #contact p {
@@ -68,10 +146,12 @@ strong {
 }
 
 #links a {
-    color: #007BFF;
+    color: var(--primary-color);
     text-decoration: none;
+    transition: color 0.3s;
 }
 
 #links a:hover {
+    color: #0056b3;
     text-decoration: underline;
 }
