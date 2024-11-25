@@ -46,7 +46,6 @@ function loadContent(language) {
                 studentItem.innerHTML = `
                     <h3>${student.name}</h3>
                     <p><strong>Email:</strong> ${student.email}</p>
-                    <p><strong>Phone:</strong> ${student.phone}</p>
                     <p><strong>Address:</strong> ${student.address}</p>
                     <p><strong>Gender:</strong> ${student.gender}</p>
                     <p><strong>Date of Birth:</strong> ${student.dob}</p>
