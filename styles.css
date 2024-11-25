@@ -1,0 +1,77 @@
+body {
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+    padding: 20px;
+    background-color: #f4f4f4;
+    color: #333;
+}
+
+h1, h2, h3 {
+    color: #333;
+}
+
+.language-selector {
+    margin-bottom: 20px;
+}
+
+#student-info, #news, #links {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+.student-card, .news-card {
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    width: calc(50% - 20px);
+    box-sizing: border-box;
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.student-card:hover, .news-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+}
+
+@media (max-width: 768px) {
+    .student-card, .news-card {
+        width: calc(100% - 20px);
+    }
+}
+
+.student-card h3, .news-card h3 {
+    margin-top: 0;
+}
+
+.student-card p, .news-card p {
+    margin: 5px 0;
+}
+
+strong {
+    color: #555;
+}
+
+#contact p {
+    margin: 20px 0;
+    font-size: 1.1em;
+}
+
+#links ul {
+    list-style: none;
+    padding: 0;
+}
+
+#links li {
+    margin: 10px 0;
+}
+
+#links a {
+    color: #007BFF;
+    text-decoration: none;
+}
+
+#links a:hover {
+    text-decoration: underline;
+}

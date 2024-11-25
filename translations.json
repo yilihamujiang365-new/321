@@ -1,0 +1,22 @@
+{
+    "en": {
+        "title": "321 Dormitory Website",
+        "languageLabel": "Select Language:",
+        "heading1": "Dormitory staff information",
+        "studentInfoHeading": "Student Information",
+        "newsHeading": "News",
+        "contactHeading": "Contact",
+        "linksHeading": "Friendship Links",
+        "developerEmail": "Developer Email:"
+    },
+    "zh": {
+        "title": "321宿舍网站",
+        "languageLabel": "选择语言:",
+        "heading1": "宿舍人员信息",
+        "studentInfoHeading": "学生信息",
+        "newsHeading": "新闻",
+        "contactHeading": "联系人",
+        "linksHeading": "友情链接",
+        "developerEmail": "开发者邮箱:"
+    }
+}
